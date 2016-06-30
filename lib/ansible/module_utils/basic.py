@@ -1458,6 +1458,9 @@ class AnsibleModule(object):
         if isinstance(value, float):
             return value
 
+        if isinstance(value, int):
+            return float(value)
+
         if isinstance(value, basestring):
             return float(value)
 
